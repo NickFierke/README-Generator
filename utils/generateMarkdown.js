@@ -48,10 +48,33 @@ ${badge}`;
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
+const generateMarkdown = (data) => {
+  return `
+# ${data.title}
 
-${renderLicenseSection(data.license)}`;
-}
+## Description
+${data.description}
+
+## Installation
+${data.installation}
+
+## Usage
+${data.usage}
+
+## Contributing
+${data.contributing}
+
+## Tests
+${data.tests}
+
+## License
+${data.license}
+
+## Contact
+Github: [${data.github}](https://github.com/${data.github})
+Email: ${data.email}
+`;
+};
 
 module.exports = generateMarkdown;
+
